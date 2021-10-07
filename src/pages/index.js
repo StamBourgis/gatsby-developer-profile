@@ -4,9 +4,12 @@ import Layout from "../components/Layout"
 import * as styles from "../styles/home.module.css"
 import { getContractors } from "../../utils/users"
 import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
 const Home = ( { data }) => {
+
+  const image = getImage(data.file.childImageSharp.fluid)
 
   return (
     <Layout>
@@ -14,12 +17,13 @@ const Home = ( { data }) => {
         <div>
           <h2>Design</h2>
           <h3>Develop</h3>
-          <p> UX designer & we b developer based in Sheffield UK</p>
+          <p> Web UX designer developer based in Sheffield, UK</p>
           <Link className={styles.btn} to="/projects">
             My Portfolio Projects
           </Link>
         </div>
-        <Img fluid = {data.file.childImageSharp.fluid}/>
+        {/* <Img fluid = {data.file.childImageSharp.fluid} placeholder="blurred"/> */}
+        <GatsbyImage image= {image}/>
       </section>
     </Layout>
   )
