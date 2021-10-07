@@ -44,3 +44,9 @@
   nav a:hover {
     border-color: white;
   }
+
+  footer {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font: lighter;
+  }
