@@ -2,14 +2,11 @@ import React, { useEffect } from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import * as styles from "../styles/home.module.css"
-import { getContractors } from "../../utils/users"
 import Img from "gatsby-image"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
 const Home = ( { data }) => {
 
-  const image = getImage(data.file.childImageSharp.fluid)
 
   return (
     <Layout>
@@ -22,8 +19,8 @@ const Home = ( { data }) => {
             My Portfolio Projects
           </Link>
         </div>
-        {/* <Img fluid = {data.file.childImageSharp.fluid} placeholder="blurred"/> */}
-        <GatsbyImage image= {image}/>
+        <Img fluid = {data.file.childImageSharp.fluid} placeholder="blurred"/>
+        
       </section>
     </Layout>
   )
