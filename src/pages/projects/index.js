@@ -5,8 +5,6 @@ import * as styles from "../../styles/projects.module.css"
 import Img from 'gatsby-image'
 
 export default function Projects( {data} ) {
-  //Logging the markdown data
-  // console.log(data)
 
   const projects = data.projects.nodes
   const contact = data.contact.siteMetadata.contact
